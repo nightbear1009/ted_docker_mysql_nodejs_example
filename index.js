@@ -36,7 +36,8 @@ global.app.get('/getDB', function (req, res) {
 
         } else {
             res.json({
-                ReturnCode: "API0001"
+                ReturnCode: "API0001",
+                Data: result
             });
         }
     });
