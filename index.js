@@ -1,13 +1,5 @@
 var mysql = require('mysql');
 var express = require('express');
-var connection = mysql.createConnection({
-    host: 'mysql',
-    port: 3306,
-    user: 'root',
-    password: 'passowrd',
-    database: 'test_db'
-});
-
 
 app = express();
 
@@ -23,7 +15,7 @@ global.app.get('/getDB', function (req, res) {
         host: 'mysql',
         port: 3306,
         user: 'root',
-        password: 'passowrd',
+        password: 'password',
         database: 'test_db'
     });
     connection.connect();
@@ -43,5 +35,9 @@ global.app.get('/getDB', function (req, res) {
     });
     connection.end();
 });
+
+
+
+
 
 app.listen(9900);
